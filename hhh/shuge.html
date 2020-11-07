@@ -1,0 +1,1697 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .nav {
+            width: 100%;
+            height: 100px;
+            padding-left: 20px;
+            color: #f66;
+            font-size: 20px;
+            line-height: 100px;
+            font-weight: bold;
+            display: inline-block;
+            position: fixed;
+            top: 0;
+            z-index: 6;
+        }
+
+        .nav .navigation {
+            margin: 0 6px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .nav .logo {
+            height: 100px;
+            float: right;
+            opacity: .8;
+        }
+
+        .top {
+            height: 550px;
+            background-size: 100%;
+            padding-top: 200px;
+            box-sizing: border-box;
+        }
+
+        .delta {
+            width: 0;
+            height: 0;
+            border: 6px solid;
+            border-color: transparent transparent #f66 transparent;
+            position: absolute;
+            left: 40%;
+            bottom: 0;
+            display: none;
+        }
+
+        .Underline {
+            text-align: center;
+            position: absolute;
+            width: 100%;
+            border: #f66 1.5px solid;
+            bottom: 26px;
+            left: 0;
+            /* display: none; */
+            transition: .3s;
+        }
+
+        .Searchform {
+            width: 800px;
+            height: 200px;
+            margin: 0 auto;
+        }
+
+        .xgz {
+            height: 100px;
+            text-align: center;
+        }
+
+        .xgz span {
+            display: inline-block;
+            width: 80px;
+            height: 100%;
+            background: url(imgs/u=3820238937\,417814277&fm=26&gp=0.jpg);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        .inputtext {
+            width: 100%;
+            height: 56px;
+            margin-top: 20px;
+            outline: 0;
+            border: 0;
+            border-radius: 56px;
+            padding-left: 90px;
+            font-size: 20px;
+            box-sizing: border-box;
+        }
+
+        .Searchform button {
+            width: 100px;
+            height: 50px;
+            outline: 0;
+            border: 0;
+            border-radius: 50px;
+            position: absolute;
+            right: 2px;
+            top: 23px;
+            background-color: #f66;
+            font-size: 20px;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .Searchform form {
+            position: relative;
+        }
+
+        .ssk {
+            width: 60px;
+            height: 50px;
+            background-color: #f66;
+            position: absolute;
+            left: 23px;
+            top: 20px;
+            background: url(imgs/u=2697957662\,2645136165&fm=26&gp=0.jpg);
+            background-size: 100%;
+        }
+
+        .dh {
+            width: 30px;
+            height: 60px;
+            background-color: aqua;
+            margin: 0 auto;
+            position: relative;
+            top: 20px;
+            background: url(imgs/u=1306519479\,3791485949&fm=26&gp=0.jpg);
+            background-size: 100%;
+            opacity: 1;
+            animation: dhxg 2s infinite;
+        }
+
+        @keyframes dhxg {
+            from {
+                top: 20px;
+                opacity: 1;
+            }
+
+            to {
+                top: 50px;
+                opacity: 0;
+            }
+        }
+
+        .note {
+            margin-left: 50px;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        sup {
+            color: red;
+        }
+
+        .suggest {
+            width: 1572px;
+            height: 300px;
+            font-size: 16px;
+            line-height: 20px;
+        }
+    </style>
+    <style type="text/css">
+        .min {
+            height: 254px;
+            width: 100%;
+            display: flex;
+        }
+
+        .m1 {
+
+            height: 200.56px;
+            margin-top: 50px;
+
+        }
+
+        .m2 {
+
+            height: 200.56px;
+            margin-top: 50px;
+
+        }
+
+        .m3 {
+
+            height: 200.56px;
+            margin-top: 50px;
+
+        }
+
+        .xxx {
+            width: 427.667px;
+            height: 121.8px;
+            margin: 35px 50px;
+        }
+
+        .yyy {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+
+            vertical-align: top;
+            float: left;
+        }
+
+        .min .h3 {
+            display: inline-block;
+            margin: 0 0 -3px;
+            padding: 0 0 0;
+            margin-left: 25px;
+            letter-spacing: 1px;
+            font-size: 1.25em;
+            line-height: 1.5;
+            color: #222;
+            font-weight: 600;
+            vertical-align: top;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "Microsoft Jhenghei", "Microsoft Yahei", "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif, apple color emoji, segoe ui emoji;
+            float: left;
+        }
+
+        .ppp {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "Microsoft Jhenghei", "Microsoft Yahei", "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif, apple color emoji, segoe ui emoji;
+            line-height: 1.65em;
+            margin: -10px 0 0 75px;
+            color: #111;
+            float: left;
+        }
+
+        .cl {
+            clear: both;
+        }
+    </style>
+    <style>
+        .box-zy {
+            width: 100%;
+            height: 565px;
+            background-color: #f8f8f8;
+            box-sizing: border-box;
+            margin-bottom: 3px;
+        }
+
+        .left-box {
+            float: left;
+            width: 40%;
+            height: 100%;
+        }
+
+        .content-box {
+            width: 533px;
+            height: 237px;
+            margin: 25% auto 0;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .content-box span {
+            display: inline-block;
+            width: 100%;
+            height: 67px;
+            line-height: 67px;
+        }
+
+        .content-box span img {
+            display: inline-block;
+            width: 45px;
+            height: 45px;
+            margin-top: 12px;
+        }
+
+        .content-box h3 {
+            margin-top: 30px;
+            font-size: 36px;
+            font-weight: 400;
+        }
+
+        .content-box p {
+            font-size: 15px;
+            color: gray;
+        }
+
+        .btn-box {
+            width: 100%;
+            height: 49px;
+        }
+
+        .btn-box button:nth-child(1) {
+            width: 107px;
+            height: 41px;
+            background-color: rgb(6, 240, 104);
+            font-size: 100%;
+            color: blanchedalmond;
+            border: 0;
+            margin-top: 10px;
+        }
+
+        .btn-box button:nth-child(2) {
+            width: 107px;
+            height: 41px;
+            background-color: rgb(128, 148, 136);
+            font-size: 100%;
+            color: rgb(53, 51, 46);
+            border: 0;
+            margin-top: 10px;
+        }
+
+        .btn-box img {
+            width: 15px;
+            height: 20px;
+        }
+
+        .right-box {
+            float: left;
+            width: 59%;
+            height: 100%;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+
+        .cl {
+            clear: both;
+        }
+
+        .right-top-box {
+            width: 100%;
+            height: 40%;
+            margin-bottom: 2px;
+        }
+
+        .qjyb {
+            position: relative;
+            width: 50%;
+            height: 100%;
+            text-align: center;
+            overflow: hidden;
+            float: left;
+        }
+
+        .qjyb span {
+            position: absolute;
+            top: 50%;
+            left: 45%;
+            display: block;
+            color: #fff;
+            font-size: 1.3em;
+            z-index: 1;
+        }
+
+        .qjyb img {
+            width: 100%;
+            height: 100%;
+            transition: all .3s;
+        }
+
+        .lvj {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            opacity: .4;
+        }
+
+        .lzqt {
+            position: relative;
+            width: 50%;
+            height: 100%;
+            text-align: center;
+            overflow: hidden;
+            float: left;
+        }
+
+        .lzqt span {
+            position: absolute;
+            left: 45%;
+            top: 50%;
+            display: block;
+            color: #fff;
+            font-size: 1.3em;
+            z-index: 1;
+        }
+
+        .lzqt img {
+            width: 100%;
+            height: 100%;
+            transition: all .3s;
+        }
+
+        .imgs-scale {
+            transform: scale(1.1);
+        }
+
+        .right-bto-box {
+            width: 100%;
+            height: 60%;
+            overflow: hidden;
+        }
+
+        .right-bto-box ul {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            white-space: nowrap;
+
+        }
+
+        .imgsList {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transition: all .3s;
+        }
+
+        .imgsList img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .imgsList div {
+            width: 25%;
+        }
+
+        .imgsList p {
+            position: absolute;
+            top: 50%;
+            left: 2%;
+            color: #fff;
+            opacity: 1;
+            font-size: 18px;
+            line-height: 1.1em;
+            font-weight: 600;
+        }
+    </style>
+    <style>
+        .ziyuan {
+            width: 100%;
+            height: 212px;
+            background: #F2F2F2;
+            display: flex;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "Microsoft Jhenghei", "Microsoft Yahei", "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif, apple color emoji, segoe ui emoji;
+        }
+
+        .ziyuan i {
+            display: inline-block;
+            width: 90px;
+            height: 90px;
+            background: url(imgs/水瓢.png)no-repeat;
+            background-size: 100%;
+            margin-left: 80px;
+        }
+
+        .ziyuan p {
+            margin-left: 70px;
+            font-size: 20pt;
+        }
+
+        .ziyuan .box {
+            width: 40%;
+            padding-left: 130px;
+            box-sizing: border-box;
+        }
+
+        .ziyuan .box div {
+            margin-top: 20px;
+        }
+
+        .ziyuan .box div a img {
+            vertical-align: middle;
+        }
+
+        .ziyuan .box div a:first-child {
+            display: inline-block;
+            width: 107px;
+            height: 42px;
+            background: #E60013;
+            color: #fff;
+            text-align: center;
+            line-height: 42px;
+
+        }
+
+        .ziyuan .box div a:nth-child(2) {
+            display: inline-block;
+            width: 178px;
+            height: 43px;
+            background: #DADADA;
+            color: #555555;
+            text-align: center;
+            line-height: 42px;
+        }
+
+        .ziyuan .box2 {
+            width: 60%;
+            height: 211px;
+            overflow: hidden;
+            float: left;
+        }
+
+        .ziyuan .box2 ul li {
+            float: left;
+            width: 24.8%;
+            height: 105px;
+            color: #fff;
+            font-size: 20px;
+            overflow: hidden;
+            box-sizing: border-box;
+            margin-right: 2px;
+            margin-top: 2px;
+        }
+
+        .ziyuan .box2 ul li:nth-child(4),
+        .ziyuan .box2 ul li:nth-child(8) {
+            margin-right: 0px;
+        }
+
+        .ziyuan .box2 ul li a {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 101px;
+        }
+
+        .ziyuan .box2 ul li img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            transition: all .8s;
+        }
+
+        .ziyuan .box2 ul li span {
+            position: relative;
+            font-weight: bold;
+            z-index: 2;
+        }
+
+        .ziyuan .box2 ul li:hover span {
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: rgba(191, 191, 191, .6);
+        }
+
+        .ziyuan .box2 ul li:hover img {
+            transform: scale(1.03);
+        }
+    </style>
+
+
+
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "Microsoft Jhenghei", "Microsoft Yahei", "PingFang SC";
+        }
+
+        .map_pic div {
+            min-width: 120px;
+            max-width: 240px;
+            display: block;
+            background: white;
+            box-shadow: 0px 0px 7px #ccc;
+            opacity: 0;
+            position: absolute;
+            left: 50px;
+            top: -10px;
+            transition: all 0.3s;
+            padding: 15px;
+        }
+
+        .map_pic div p {
+            color: red;
+            margin-bottom: 20px;
+        }
+
+        .map_pic li i:hover+div {
+            opacity: 1;
+            left: 20px;
+            z-index: 2;
+        }
+
+        .qc::after {
+            display: block;
+            content: "";
+            clear: both;
+        }
+
+        .full_left {
+            float: left;
+        }
+
+        .full_right {
+            float: right;
+        }
+
+        .map {
+            width: 100%;
+            height: 675px;
+            overflow: hidden;
+            /* box-shadow: 2px 0px 3px rgba(204, 204, 204, 0.9); */
+        }
+
+        .map_pic {
+            width: 872px;
+            height: 420px;
+            margin: 40px 20px 0 20px;
+            background-size: 100%;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .map_pic img {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            transition: all 1s;
+        }
+
+        .map_pic li {
+            list-style: none;
+            display: block;
+            border-radius: 50%;
+            width: 12px;
+            height: 12px;
+            position: absolute;
+            /* z-index: 2; */
+            transition: all 1s;
+        }
+
+        .map_pic li i {
+            display: block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            animation: mymove 1.5s infinite linear;
+        }
+
+        @keyframes mymove {
+            from {
+                width: 12px;
+                height: 12px;
+                margin-top: 0;
+                margin-left: 0;
+                opacity: 1;
+            }
+
+            to {
+                width: 32px;
+                height: 32px;
+                margin-top: -10px;
+                margin-left: -10px;
+                opacity: 0;
+            }
+        }
+
+        .copy {
+            padding: 140px 20px 20px 20px;
+            width: 565px;
+            /* width: 567px; */
+            height: 360px;
+            text-align: center;
+        }
+
+        .book {
+            display: inline-block;
+            width: 45px;
+            height: 66px;
+            background: pink;
+        }
+
+        .copy>p:nth-child(2) {
+            font-size: 32px;
+            margin-top: 50px;
+        }
+
+        .fish {
+            width: 30px;
+            height: 48px;
+            margin: 0px 750px;
+            margin-top: 30px;
+            background: deepskyblue;
+            position: relative;
+            z-index: 1;
+        }
+
+        .map_end {
+            width: 110%;
+            height: 200px;
+            box-shadow: 0 0 44px -8px rgba(0, 0, 0, .2);
+            transform: rotate(-4deg);
+        }
+
+        .zxzx {
+            width: 1310px;
+            height: 310px;
+            margin: 0px auto;
+            padding: 20px 0;
+        }
+
+        .zxzx_title {
+            margin-bottom: 40px;
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 35px;
+        }
+
+        .zxzx_lr {
+            width: 100%;
+            height: 234px;
+            position: relative;
+        }
+
+        .zxzx_lr:hover .zxzx_lrb {
+            opacity: 1;
+        }
+
+        .zxzx_lr .zxzx_lra:nth-child(n+2) {
+            margin-left: 78px;
+        }
+
+        .zxzx_lra {
+            width: 384px;
+            position: relative;
+        }
+
+        .zxzx_lra:hover::before {
+            opacity: .7;
+        }
+
+        .zxzx_lra::before {
+            display: block;
+            content: "";
+            width: 388px;
+            height: 204px;
+            background: white;
+            position: absolute;
+            transition: all .6s;
+            opacity: 0;
+        }
+
+        .zxzx_fh {
+            display: block;
+            position: absolute;
+            top: 70px;
+            left: 153px;
+            width: 80px;
+            height: 80px;
+            border-radius: 5px;
+            background: red;
+            transition: all .6s;
+            opacity: 0;
+        }
+
+        .zxzx_lra:hover .zxzx_fh {
+            opacity: 0.6;
+        }
+
+        .zxzx_lra img {
+            height: 204px;
+            border-radius: 3px;
+        }
+
+        .zxzx_lra a {
+            text-decoration: none;
+            line-height: 24px;
+            font-size: 18px;
+            font-weight: bold;
+            color: black;
+        }
+
+        .zxzx_lrb {
+            position: absolute;
+            display: block;
+            height: 60px;
+            width: 60px;
+            border-radius: 3px;
+            opacity: 0;
+            cursor: pointer;
+            background: rgba(0, 0, 0, .3);
+            transition: all .5s;
+        }
+
+        .zxzx_jta {
+            left: 0;
+            top: 60px;
+        }
+
+        .zxzx_jtb {
+            right: -1px;
+            top: 60px;
+        }
+    </style>
+    <style>
+        .footer {
+            width: 100%;
+            height: 800px;
+            padding-top: 60px;
+            margin-top: 100px;
+            position: relative;
+            background: #f2f2f2 url(//new.shuge.org/wp-content/themes/artview/images/background-images/he-wu.png);
+        }
+
+        .footer article .imgg {
+            width: 234px;
+            height: 120px;
+            position: absolute;
+            right: 50px;
+            top: -90px;
+        }
+
+        .footer>article:first-child {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .footer article:first-child div {
+            width: 260px;
+            color: #616161;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "Microsoft Jhenghei", "Microsoft Yahei", "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif, apple color emoji, segoe ui emoji;
+        }
+
+        .footer article:first-child div:nth-child(2) article:first-child h3 {
+            padding-bottom: 10px;
+        }
+
+        .footer article:first-child div:nth-child(2) article:first-child {
+            padding-bottom: 50px;
+        }
+
+        .footer article:first-child div:nth-child(2) article:first-child li {
+            font-size: 14px;
+            padding-bottom: 5px;
+
+        }
+
+        .footer article:first-child div:nth-child(2) article:first-child li:hover {
+            color: #A4A4A4;
+            cursor: pointer;
+        }
+
+        .footer article:first-child div:nth-child(2) article:nth-child(2) li img {
+            width: 40px;
+            height: 30px;
+            margin-right: 10px;
+            border: 3px solid #E8E8E8;
+        }
+
+        .footer article:first-child div:nth-child(2) article:nth-child(2) a {
+            display: flex;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .footer article:first-child div:nth-child(2) article:nth-child(2) div p {
+            margin-bottom: 5px;
+        }
+
+        .footer article:first-child div:nth-child(3) ul:first-child {
+            display: inline-block;
+            width: 100%;
+            height: 20px;
+        }
+
+        .footer article:first-child div:nth-child(3) ul:first-child li {
+            display: inline-block;
+            padding: 0px 5px;
+            margin-left: 10px;
+            padding-bottom: 10px;
+
+        }
+
+        .footer article:first-child div:nth-child(3) ul:first-child li:hover {
+            border-bottom: 2px solid#5E5E5E;
+            cursor: pointer;
+        }
+
+        .footer article:first-child div:nth-child(3) ul:nth-child(2) {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .footer article:first-child div:nth-child(3) ul:nth-child(2) li {
+            padding-bottom: 10px;
+            width: 250px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            cursor: pointer;
+        }
+
+        .footer article:first-child div:nth-child(3) ul:nth-child(2) span {
+            display: block;
+
+        }
+
+        .footer article:first-child div:nth-child(3) li {
+            display: inline-block;
+            padding-top: 10px;
+            font-size: 13px;
+        }
+
+        .footer article:first-child div:nth-child(4) li {
+            line-height: 1.8;
+            font-size: 14px;
+        }
+
+        .footer article:first-child div:nth-child(4) li:hover {
+            color: #A4A4A4;
+            cursor: pointer;
+        }
+
+        .footer article:first-child div:nth-child(4) article {
+            padding-top: 55px;
+        }
+
+        .footer article:first-child div:nth-child(4) article ul li {
+            line-height: 1.8;
+        }
+
+        .footer article:first-child div:last-child li {
+            font-size: 14px;
+        }
+
+        .footer article:first-child div:last-child article:first-child h3 {
+            padding-bottom: 5px;
+        }
+
+        .footer article:first-child div:last-child article:first-child li:hover a {
+            color: #A4A4A4;
+            cursor: pointer;
+        }
+
+        .footer article:first-child div:last-child article:nth-child(2) {
+            padding-top: 30px;
+        }
+
+        .footer article:first-child div:last-child article:nth-child(2) li:hover a {
+            color: #A4A4A4;
+            cursor: pointer;
+        }
+
+        .footer article:first-child div:last-child article:nth-child(2) li {
+            padding-top: 5px;
+        }
+
+        .footer article:first-child div:last-child article:last-child {
+            padding-top: 20px;
+        }
+
+        .footer article:first-child div:last-child article:last-child p {
+            padding-top: 5px;
+            line-height: 1.8;
+            font-size: 14px;
+        }
+
+        .footer article:first-child div:last-child article:last-child a {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: url(imgs/文体-书本.png)no-repeat;
+        }
+
+        .footer article:last-child span {
+            padding: 70px 50px;
+            float: left;
+            font-size: 12px;
+            color: #A4A4A4;
+        }
+
+        .footer article:last-child span a {
+            color: #000;
+        }
+
+        .footer article:last-child span a:hover {
+            color: #86E2F2;
+        }
+
+        .footer article:last-child span:last-child {
+            float: right;
+        }
+
+        .footer article:last-child span:last-child i {
+            padding-left: 15px;
+        }
+
+        .footer article:last-child span:last-child i:first-child {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            background: url(imgs/推特1.png)no-repeat;
+        }
+
+        .footer article:last-child span:last-child i:first-child:hover {
+            background: url(imgs/推特hover.png)no-repeat;
+        }
+
+        .footer article:last-child span:last-child i:nth-child(2) {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            background: url(imgs/微博.png)no-repeat;
+        }
+
+        .footer article:last-child span:last-child i:nth-child(2):hover {
+            background: url(imgs/微博hover.png)no-repeat;
+        }
+
+        .footer article:last-child span:last-child i:nth-child(3) {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            background: url(imgs/豆瓣.png)no-repeat;
+
+        }
+
+        .footer article:last-child span:last-child i:nth-child(3):hover {
+            background: url(imgs/豆瓣\(1\).png)no-repeat;
+        }
+
+        .footer article:last-child span:last-child i:nth-child(4) {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            background: url(imgs/云.png)no-repeat;
+        }
+
+        .footer article:last-child span:last-child i:nth-child(4):hover {
+            background: url(imgs/云hover.png)no-repeat;
+        }
+
+        .footer article:last-child span:last-child i:nth-child(5) {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            background: url(imgs/爱心\(1\).png)no-repeat;
+        }
+
+        .footer article:last-child span:last-child i:nth-child(5):hover {
+            background: url(imgs/爱心hover.png)no-repeat;
+        }
+
+        .footer article:last-child span:last-child i:last-child {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            background: url(imgs/网络1.png)no-repeat;
+        }
+
+        .footer article:last-child span:last-child i:last-child:hover {
+            background: url(imgs/网络限速.png)no-repeat;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+    </style>
+    <style>
+        .twonav {
+            display: inline-block;
+
+            width: 50px;
+            height: 50px;
+            border: cornflowerblue 1px solid;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="toplist">
+        <div class="nav">
+            <p class="navigation">
+                首页
+                <span class="Underline">
+                    <span class="delta"></span>
+                    <span class="twonav">sss</span>
+                </span>
+
+            </p>
+            <p class="navigation">
+                资源集
+                <span class="Underline">
+                    <span class="delta"></span>
+                </span>
+            </p>
+            <p class="navigation">
+                服务
+                <span class="Underline">
+                    <span class="delta"></span>
+                </span>
+            </p>
+            <p class="navigation">
+                <span>咨询</span>
+                <span class="Underline">
+                    <span class="delta"></span>
+                </span>
+            </p>
+            <p class="navigation">
+                <span>交流区</span>
+                <span class="Underline">
+                    <span class="delta"></span>
+                </span>
+            </p>
+            <p class="navigation">
+                <span>捐赠</span>
+                <span class="Underline">
+                    <span class="delta"></span>
+                </span>
+            </p>
+            <p class="navigation">
+                <span>关于</span>
+                <span class="Underline">
+                    <span class="delta"></span>
+                </span>
+            </p>
+            <p class="navigation">
+                <span><img src="imgs/扩大镜.jpg" height="20px" alt="" srcset=""></span>
+                <span class="Underline">
+                    <span class="delta"></span>
+                </span>
+            </p>
+            <a class="logoadd" href="https://new.shuge.org/">
+
+            </a>
+        </div>
+        <div class="top">
+            <div class="Searchform">
+                <div class="xgz">
+                    <span></span>
+                </div>
+                <form action="https://new.shuge.org/">
+                    <input type="text" class="inputtext" name="s">
+                    <button> 搜索</button>
+                    <p class="ssk"></p>
+                </form>
+
+            </div>
+            <p class="dh"></p>
+        </div>
+        <p class="note">^背景图为仿王叔明秋山草堂图轴局部 <sup>[1]</sup> </p>
+    </div>
+    <div class="min">
+        <div class="m1">
+            <div class="xxx">
+                <div class="yyy">
+                    <img src="imgs/111.png">
+                </div>
+                <h3 class="h3">完全开放</h3>
+                <p class="ppp"><strong
+                        style="color: red;">书格</strong>是一个自由开放的在线古籍图书馆。致力于开放式分享、介绍、推荐有价值的古籍善本，并鼓励将文化艺术作品数字化归档。</p>
+            </div>
+        </div>
+        <div class="m2">
+            <div class="xxx">
+                <div class="yyy">
+                    <img src="imgs/222.png">
+                </div>
+                <h3 class="h3">精心挑选</h3>
+                <p class="ppp">我们尽量挑选欣赏和在阅读价值较高的善本，所以我们更倾向于：艺术类、影像类、珍稀类以及部分刊印水平较高的书籍。</p>
+            </div>
+        </div>
+        <div class="m3">
+            <div class="xxx">
+                <div class="yyy">
+                    <img src="imgs/333.png">
+                </div>
+                <h3 class="h3">全力呈现</h3>
+                <p class="ppp">我们尽可能呈现书籍品貌、内容。借此计划让大家自由、免费地欣赏到那些难以现世的书籍。希望大家能从中感受到人类文明进程。</p>
+            </div>
+        </div>
+        <div class="cl"></div>
+    </div>
+
+    <div class="box-zy">
+        <div class="left-box">
+            <div class="content-box">
+                <span>
+                    <img
+                        src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600758364594&di=1b6ce07e79a414f2af95ddf4e49cf9b4&imgtype=0&src=http%3A%2F%2Fpic.51yuansu.com%2Fpic3%2Fcover%2F03%2F10%2F67%2F5b4861d807041_610.jpg">
+                </span>
+                <h3>最新资源集</h3>
+                <p>新版已发布 200 套资源，你可以浏览所有资源或热门访问的资源</p>
+                <div class="btn-box">
+                    <button>
+                        <img src="imgs/1.png" alt="">所有资源
+                    </button>
+                    <button>
+                        <img src="imgs/1.png" alt="">所有资源
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="right-box">
+            <div class="right-top-box">
+                <div class="qjyb">
+                    <img src="https://new.shuge.org/wp-content/uploads/2020/09/qun_jing_yin_bian01-1000x510.jpg" alt="">
+                    <span>群经音辨</span>
+                    <div class="lvj"></div>
+                </div>
+                <div class="lzqt">
+                    <img src="https://new.shuge.org/wp-content/uploads/2020/09/liao_zhai_quan_tu01-1000x510.jpg" alt="">
+                    <span>聊斋全图</span>
+                    <div class="lvj"></div>
+                </div>
+                <div class="cl"></div>
+            </div>
+            <div class="right-bto-box">
+                <ul>
+                    <li class="imgsList">
+                        <img src="https://new.shuge.org/wp-content/uploads/2020/09/die_baukunst_und_religiose_kultur_der_chinesen35-845x321.jpg"
+                            alt="">
+                        <div class="lvj">
+                            <p>中国建筑和宗教文化</p>
+                        </div>
+                    </li>
+                    <li class="imgsList">
+                        <img src="https://new.shuge.org/wp-content/uploads/2020/09/tu_zhu_ba_shi_yi_nan_jing01-845x321.jpg"
+                            alt="">
+                        <div class="lvj">
+                            <p>图注八十一难经</p>
+                        </div>
+                    </li>
+                    <li class="imgsList">
+                        <img src="https://new.shuge.org/wp-content/uploads/2020/08/wu_jing_she_xue_zheng_zong01-845x321.jpg"
+                            alt="">
+                        <div class="lvj">
+                            <p>武经射学正宗</p>
+                        </div>
+                    </li>
+                    <li class="imgsList">
+                        <img src="https://new.shuge.org/wp-content/uploads/2020/08/decoration_palace_buildings_peking01-845x321.jpg"
+                            alt="">
+                        <div class="lvj">
+                            <p>北京皇宫建筑装饰</p>
+                        </div>
+                    </li>
+                    <li class="cl"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="cl"></div>
+    </div>
+
+    <article class="ziyuan">
+        <div class="box">
+            <i></i>
+            <p>随机资源集</p>
+            <div>
+                <a><img src="imgs/星星.png"></img>热门资源</a>
+                <a><img src="imgs/文体-书本.png"></img>已整理未发布的资源</a>
+            </div>
+        </div>
+        <div class="box2">
+            <ul>
+                <li><a><span>吕氏春秋</span><img
+                            src="https://new.shuge.org/wp-content/uploads/2020/06/zhou_yi_ben_yi_fu_lu_zuan_zhu05-1000x841.jpg"></a>
+                </li>
+                <li><a><span>吕氏春秋</span><img
+                            src="https://new.shuge.org/wp-content/uploads/2020/06/zhou_yi_ben_yi_fu_lu_zuan_zhu05-1000x841.jpg"></a>
+                </li>
+                <li><a><span>福尔曼的中国摄影集</span><img
+                            src="https://new.shuge.org/wp-content/uploads/2020/06/zhou_yi_ben_yi_fu_lu_zuan_zhu05-1000x841.jpg"></a>
+                </li>
+                <li><a><span>无声诗史</span><img
+                            src="https://new.shuge.org/wp-content/uploads/2020/06/zhou_yi_ben_yi_fu_lu_zuan_zhu05-1000x841.jpg"></a>
+                </li>
+                <li><a><span>移情摘粹</span><img
+                            src="https://new.shuge.org/wp-content/uploads/2020/06/zhou_yi_ben_yi_fu_lu_zuan_zhu05-1000x841.jpg"></a>
+                </li>
+                <li><a><span>无声诗史</span><img
+                            src="https://new.shuge.org/wp-content/uploads/2020/06/zhou_yi_ben_yi_fu_lu_zuan_zhu05-1000x841.jpg"></a>
+                </li>
+                <li><a><span>无声诗史</span><img
+                            src="https://new.shuge.org/wp-content/uploads/2020/06/zhou_yi_ben_yi_fu_lu_zuan_zhu05-1000x841.jpg"></a>
+                </li>
+                <li><a><span>无声诗史</span><img
+                            src="https://new.shuge.org/wp-content/uploads/2020/06/zhou_yi_ben_yi_fu_lu_zuan_zhu05-1000x841.jpg"></a>
+                </li>
+            </ul>
+        </div>
+    </article>
+    <div class="map qc">
+        <div class="map_pic full_left" title="世界">
+            <img src="https://new.shuge.org/wp-content/uploads/2019/08/worldmappp.png">
+            <li style="background: #eacd76;top: 125px;left: 680px;"><i style="background: #eacd76;"></i>
+                <div>
+                    <p>中国大陆</p>
+                    <span>XXX图书馆</span>
+                </div>
+            </li>
+            <li style="background: #0099ff;top: 176px;left: 715px;"><i style="background: #0099ff;"></i>
+                <div>
+                    <p>台湾（中国）</p>
+                    <span>XXX图书馆</span>
+                </div>
+            </li>
+            <li style="background: #e00202;top: 150px;left: 760px;"><i style="background: #e00202;"></i>
+                <div>
+                    <p>日本</p>
+                    <span>XXX图书馆</span>
+                </div>
+            </li>
+            <li style="background: #9452e5;top: 185px;left: 700px;"><i style="background: #9452e5;"></i>
+                <div>
+                    <p>香港（中国）</p>
+                    <span>XXX图书馆</span>
+                </div>
+            </li>
+            <li style="background: #e00202;top: 95px;left: 418px;"><i style="background: #e00202;"></i>
+                <div>
+                    <p>英国</p>
+                    <span>XXX图书馆</span>
+                </div>
+            </li>
+            <li style="background: #004db5;top: 116px;left: 422px;"><i style="background: #004db5;"></i>
+                <div>
+                    <p>法国</p>
+                    <span>XXX图书馆</span>
+                </div>
+            </li>
+            <li style="background: #000000;top: 102px;left: 445px;"><i style="background: #000000;"></i>
+                <div>
+                    <p>德国</p>
+                    <span>XXX图书馆</span>
+                </div>
+            </li>
+            <li style="background: #0099ff;top: 125px;left: 210px; "><i style="background:#0099ff;"></i>
+                <div>
+                    <p>美国</p>
+                    <span>XXX图书馆</span>
+                </div>
+            </li>
+            <li style="background: #e00202;top: 80px;left: 240px; "><i style="background: #e00202;"></i>
+                <div>
+                    <p>加拿大</p>
+                    <span>XXX图书馆</span>
+                </div>
+            </li>
+            <li style="background: #004db5;top: 80px;left: 490px;"><i style="background: #004db5;"></i>
+                <div>
+                    <p>俄罗斯</p>
+                    <span>XXX图书馆</span>
+                </div>
+            </li>
+            <li style="background: #00b07b;top: 280px;left: 305px;"><i style="background: #00b07b;"></i>
+                <div>
+                    <p>巴西</p>
+                    <span>XXX图书馆</span>
+                </div>
+            </li>
+            <li style="background: #004db5;top: 344px;left: 775px;"><i style="background: #004db5"></i>
+                <div>
+                    <p>澳大利亚</p>
+                    <span>XXX图书馆</span>
+                </div>
+            </li>
+        </div>
+        <div class="copy full_left">
+            <span class="book"></span>
+            <p>感谢开放的互联网</p>
+            <p>每个人都能自由地看到我们的文明</p>
+        </div>
+        <div class="fish full_left"></div>
+        <div class="map_end full_left">
+
+        </div>
+    </div>
+    <div class="zxzx">
+        <h3 class="zxzx_title">最新资讯</h3>
+        <div class="zxzx_lr qc">
+            <div class="zxzx_lra full_left">
+                <img src="https://new.shuge.org/wp-content/uploads/2020/05/qizhounian-710x375.jpg">
+                <a href="https://new.shuge.org/seven_years/" title="七周年，期乎千里">七周年，期乎千里</a>
+                <span class="zxzx_fh"></span>
+            </div>
+            <div class="zxzx_lra full_left">
+                <img src="https://new.shuge.org/wp-content/uploads/2020/04/beifeng-710x375.jpg">
+                <a href="https://new.shuge.org/zan_ting_zhi_chi_bai_du_wang_pan/" title="停止支持百度网盘下载节点">停止支持百度网盘下载节点</a>
+                <span class="zxzx_fh"></span>
+            </div>
+            <div class="zxzx_lra full_left">
+                <img src="https://new.shuge.org/wp-content/uploads/2019/09/guobaojiguang001-710x375.jpg">
+                <a href="https://new.shuge.org/guo_bao_ji_guang/" title="中华传统文化典籍保护传承大展（一）">中华传统文化典籍保护传承大展（一）</a>
+                <span class="zxzx_fh"></span>
+            </div>
+            <span class="zxzx_lrb zxzx_jta"></span>
+            <span class="zxzx_lrb zxzx_jtb"></span>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <article>
+            <img class="imgg" src="imgs/xunma.png">
+            <div>
+                <article>
+                    <h3>书格资源</h3>
+                    <ul>
+                        <li>书格旧版资源</li>
+                        <li>已整理未发布的资源</li>
+                        <li>文件同步</li>
+                        <li>文件目录</li>
+                    </ul>
+                </article>
+                <article>
+                    <h3>更新资源集</h3>
+                    <ul>
+                        <li><a><img
+                                    src="https://new.shuge.org/wp-content/uploads/2020/09/qun_jing_yin_bian01-36x36.jpg"></img>
+                                <div>
+                                    <p>书格旧版资源</p>
+                                    <p>2020年09月22日</p>
+                                </div>
+                            </a></li>
+                        <li><a><img
+                                    src="https://new.shuge.org/wp-content/uploads/2020/09/qun_jing_yin_bian01-36x36.jpg"></img>
+                                <div>
+                                    <p>书格旧版资源</p>
+                                    <p>2020年09月22日</p>
+                                </div>
+                            </a></li>
+                        <li><a><img
+                                    src="https://new.shuge.org/wp-content/uploads/2020/09/qun_jing_yin_bian01-36x36.jpg"></img>
+                                <div>
+                                    <p>书格旧版资源</p>
+                                    <p>2020年09月22日</p>
+                                </div>
+                            </a></li>
+                        <li><a><img
+                                    src="https://new.shuge.org/wp-content/uploads/2020/09/qun_jing_yin_bian01-36x36.jpg"></img>
+                                <div>
+                                    <p>书格旧版资源</p>
+                                    <p>2020年09月22日</p>
+                                </div>
+                            </a></li>
+                        <li><a><img
+                                    src="https://new.shuge.org/wp-content/uploads/2020/09/qun_jing_yin_bian01-36x36.jpg"></img>
+                                <div>
+                                    <p>书格旧版资源</p>
+                                    <p>2020年09月22日</p>
+                                </div>
+                            </a></li>
+                        <li><a><img
+                                    src="https://new.shuge.org/wp-content/uploads/2020/09/qun_jing_yin_bian01-36x36.jpg"></img>
+                                <div>
+                                    <p>书格旧版资源</p>
+                                    <p>2020年09月22日</p>
+                                </div>
+                            </a></li>
+                    </ul>
+                </article>
+            </div>
+            <div>
+                <ul>
+                    <li>评论</li>
+                    <li>最新</li>
+                    <li>热门资讯</li>
+                </ul>
+                <ul>
+                    <li><a>旧版相对容易抓取下载操作相对比下载操作相对比<span>2020年09月22日 - 22:12 撰自 未曾</span></a></li>
+                    <li><a>旧版相对容易抓取下载操作相对比下载操作相对比<span>2020年09月22日 - 22:12 撰自 未曾</span></a></li>
+                    <li><a>旧版相对容易抓取下载操作相对比下载操作相对比<span>2020年09月22日 - 22:12 撰自 未曾</span></a></li>
+                    <li><a>旧版相对容易抓取下载操作相对比下载操作相对比<span>2020年09月22日 - 22:12 撰自 未曾</span></a></li>
+                    <li><a>旧版相对容易抓取下载操作相对比下载操作相对比<span>2020年09月22日 - 22:12 撰自 未曾</span></a></li>
+                    <li><a>旧版相对容易抓取下载操作相对比下载操作相对比<span>2020年09月22日 - 22:12 撰自 未曾</span></a></li>
+                    <li><a>旧版相对容易抓取下载操作相对比下载操作相对比<span>2020年09月22日 - 22:12 撰自 未曾</span></a></li>
+                    <li><a>旧版相对容易抓取下载操作相对比下载操作相对比<span>2020年09月22日 - 22:12 撰自 未曾</span></a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>图书馆推荐</h3>
+                <li><a>世界数字图书馆</a></li>
+                <li><a>互联网档案馆</a></li>
+                <li><a>日本内阁文库</a></li>
+                <li><a>普林斯顿大学东亚图书馆</a></li>
+                <li><a>普林斯顿大学东亚图书馆</a></li>
+                <li><a>普林斯顿大学东亚图书馆</a></li>
+                <li><a>日本内阁文库</a></li>
+                <li><a>日本内阁文库</a></li>
+                <li><a>世界数字图书馆</a></li>
+                <li><a>日本内阁文库</a></li>
+                <li><a>日本内阁文库</a></li>
+                <li><a>日本内阁文库</a></li>
+                <li><a>日本内阁文库</a></li>
+                <li><a>世界数字图书馆</a></li>
+                <li><a>日本内阁文库</a></li>
+                <li><a>世界数字图书馆</a></li>
+                <li><a>日本内阁文库</a></li>
+                <article>
+                    <h3>博物馆推荐</h3>
+                    <ul>
+                        <li><a>北京故宫博物院</a></li>
+                        <li><a>北京故宫博物院</a></li>
+                        <li><a>北京故宫博物院</a></li>
+                        <li><a>北京故宫博物院</a></li>
+                    </ul>
+                </article>
+            </div>
+            <div>
+                <article>
+                    <h3>近期回复</h3>
+                    <ul>
+                        <li>求证 在<a>求助：哈佛图书馆的《歷代神仙通鑑》登陆下载？</a><span>2小时， 46分 前</span></li>
+                        <li>未曾 在<a>请求资源</a><span>12小时， 38分 前</span></li>
+                        <li>未曾 在<a>求助：哈佛图书馆的《歷代神仙通鑑》登陆下载？</a><span>19小时， 45分 前</span></li>
+                        <li>未曾 在<a>求助：哈佛图书馆的《歷代神仙通鑑》登陆下载？</a><span>19小时， 45分 前</span></li>
+                    </ul>
+                </article>
+                <article>
+                    <h3>近期话题</h3>
+                    <ul>
+                        <li><a>请求资源</a><span>由某游客</span></li>
+                        <li><a>求助：哈佛图书馆的《歷代神仙通鑑》登陆下载？</a><span>由 求证</span></li>
+                        <li><a>求助：哈佛图书馆的《歷代神仙通鑑》登陆下载？</a><span>由 觉先</span></li>
+                        <li><a>求助：哈佛图书馆的《歷代神仙通鑑》登陆下载？</a><span>由 kjkh</span></li>
+                    </ul>
+                </article>
+                <article>
+                    <strong>每个人都能自由地看到我们的文明</strong>
+                    <p> 书格致力于开放式分享、介绍公共版权领域的古籍善本数字资源</p>
+                    <a></a><a></a>
+                </article>
+            </div>
+        </article>
+        <article>
+            <span>2013-2020 © <a>书格</a> - Based on <a>Wordpress</a>&<a>Artview, By
+                    weiceng.</a><a>京ICP-15028230-3</a></span>
+            <span><i></i><i></i><i></i><i></i><i></i><i></i></span>
+        </article>
+    </footer>
+</body>
+<script type="text/javascript">
+    let topx = document.querySelector('.top');
+    let logoadd = document.querySelector('.logoadd');
+    var ajax = null;
+    try {
+        ajax = new XMLHttpRequest();
+    } catch (e) {
+        // 针对低版本ie所创建的ajax对象
+        ajax = new ActiveXObject("Msxml2.XMLHTTP");
+    }
+    // 构建请求的地址及方法
+    ajax.open('get', 'http://192.168.3.100:7436/index/info');
+    // 设置回调
+    ajax.onreadystatechange = function () {
+        // ajax.DONE这个常量在ie8-是undefined
+        ajax.DONE = 4;
+
+        // 判断请求状态
+        if (ajax.readyState == ajax.DONE) {
+            // http的响应状态
+            if (ajax.status === 200) {
+                // alert('服务器的响应:'+ajax.responseText);
+                let ajax1 = JSON.parse(ajax.responseText)
+               
+                for (let i = 0; i < ajax1.data.length; i++) {
+                    /* console.log(ajax1.data[i]); */
+                    let ajax2 = ajax1.data[i]
+                    console.log(ajax2);
+                    if (ajax2.type == 2) {
+                        logoadd.innerHTML = `<img class="logo" src='imgs/${ajax2.imgUrl}'>`
+                    } else if (ajax2.type == 1) {
+                        topx.innerHTML = `<img class="logo" src='imgs/${ajax2.imgUrl}'>`
+                    }
+                }
+            }
+        }
+    }
+    ajax.send(null);
+</script>
+<!-- <script src="top.js"></script> -->
+<script type="text/javascript">
+    let imgsList = document.querySelectorAll('.imgsList');
+    let imgsListUl = document.querySelector('.right-bto-box ul');
+
+    let qjyb = document.querySelector('.qjyb');
+    let lzqt = document.querySelector('.lzqt');
+
+    qjyb.onmouseenter = function () {
+        this.firstElementChild.classList.add('imgs-scale');
+    }
+    qjyb.onmouseleave = function () {
+        this.firstElementChild.classList.remove('imgs-scale');
+    }
+    lzqt.onmouseenter = function () {
+        this.firstElementChild.classList.add('imgs-scale');
+    }
+    lzqt.onmouseleave = function () {
+        this.firstElementChild.classList.remove('imgs-scale');
+    }
+
+    let imgsListLeft = 25;  //imgsList位置基本单位
+    let imgsListLeftTow = 75;
+
+    let num = 0;
+
+    let dsq = setInterval(function () {
+        if (num >= imgsList.length) {
+            num = 0;
+        }
+        for (let j = 0; j < imgsList.length; j++) {
+            if (num < j) {
+                imgsList[j].style.left = imgsListLeftTow + (j - 1) * (imgsListLeft / 3) + '%';
+            } else {
+                imgsList[j].style.left = j * (imgsListLeft / 3) + '%';
+            }
+        }
+        num++;
+    }, 1000);
+
+    for (let i = 0; i < imgsList.length; i++) {
+        imgsList[i].style.left = i * imgsListLeft + '%';
+        imgsList[i].onmouseenter = function () {
+            clearInterval(dsq);
+            for (let j = 0; j < imgsList.length; j++) {
+                if (i < j) {
+                    imgsList[j].style.left = imgsListLeftTow + (j - 1) * (imgsListLeft / 3) + '%';
+                } else if (i >= j) {
+                    imgsList[j].style.left = j * (imgsListLeft / 3) + '%';
+                }
+            }
+        }
+    }
+    imgsListUl.onmouseleave = function () {
+        for (let i = 0; i < imgsList.length; i++) {
+            imgsList[i].style.left = i / imgsList.length * 100 + '%';
+        }
+    }
+</script>
+<script type="text/javascript">
+    let li_list = document.querySelectorAll('.map_pic li');
+    let page_wz = 500;
+    let own = 0;
+    document.querySelector('.map_pic img').setAttribute('style', 'top:200px;opacity: 0;');
+
+    for (let i = 0; i < li_list.length; i++) {
+        let ntop = li_list[i].style.top;
+        ntop = parseFloat(ntop) + 100;
+        li_list[i].style.top = `${ntop}px`;
+        li_list[i].style.opacity = '0';
+    }
+    // document.body.onscroll = function () {
+
+    //     if (pageYOffset > 80) {
+    //         nav.style.background = '#fff';
+    //         for (let i = 0; i < Underline.length; i++) {
+    //             Underline[i].style.bottom = 0;
+    //         }
+    //     } else {
+    //         nav.style.background = '';
+    //         for (let i = 0; i < Underline.length; i++) {
+    //             Underline[i].style.bottom = '26px';
+    //         }
+    //     }
+
+    //     if (pageYOffset > page_wz) {
+    //         if (own == 0) {
+    //             setTimeout(function () {
+    //                 document.querySelector('.map_pic img').setAttribute('style', 'top: 0px;opacity: 1;');
+    //             }, 100);
+    //             for (let i = 0; i < li_list.length; i++) {
+    //                 let ntop = li_list[i].style.top;
+    //                 let k = (i + 1) * 500;
+    //                 let l = k + 1000;
+    //                 let j = setTimeout(function () {
+    //                     let nntop = li_list[i].style.top;
+    //                     nntop = parseFloat(nntop) - 120;
+    //                     li_list[i].style.top = `${nntop}px`;
+    //                     li_list[i].style.opacity = '1';
+
+    //                 }, k)
+    //                 let m = setTimeout(function () {
+    //                     let nntop = li_list[i].style.top;
+    //                     nntop = parseFloat(nntop) + 20;
+    //                     li_list[i].style.top = `${nntop}px`;
+    //                     li_list[i].style.opacity = '1';
+
+    //                 }, l)
+    //             }
+    //         }
+    //         own = 1;
+    //     }
+
+    // }
+</script>
+
+</html>
